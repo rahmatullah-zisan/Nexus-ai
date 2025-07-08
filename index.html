@@ -39,6 +39,19 @@
             -webkit-backdrop-filter: blur(10px);
             border: 1px solid rgba(51, 65, 85, 0.5);
         }
+        /* Floating animation for logos */
+        @keyframes float {
+            0% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+            25% { transform: translateY(-15px) translateX(10px) rotate(5deg); }
+            50% { transform: translateY(0px) translateX(-10px) rotate(0deg); }
+            75% { transform: translateY(15px) translateX(5px) rotate(-5deg); }
+            100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+        }
+        .floating-logo {
+            animation: float linear infinite;
+            position: absolute;
+            opacity: 0.07;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -65,18 +78,34 @@
                 <a href="#pricing" class="bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block cta-button">
                     Get Lifetime Access - ৳1999
                 </a>
+            </div>
+        </section>
 
-                <!-- Visual: Scroll-Reveal Screenshots -->
-                <div class="mt-16 h-[700px]"> <!-- Container with height for sticky effect -->
-                    <div id="screenshot-wrapper" class="sticky top-24 h-[600px]"> <!-- Sticky container -->
-                        <div class="relative w-[300px] h-[600px] mx-auto">
-                            <!-- Screenshot 2 (Bottom Layer) -->
-                            <img src="https://placehold.co/300x600/1E293B/818CF8?text=App+Screenshot+2" alt="App Screenshot 2" class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl shadow-2xl shadow-indigo-500/20">
-                            
-                            <!-- Screenshot 1 (Top Layer, fades out on scroll) -->
-                            <img id="screenshot-top" src="https://placehold.co/300x600/1E293B/FFFFFF?text=App+Screenshot+1" alt="App Screenshot 1" class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl shadow-2xl shadow-sky-500/20 transition-opacity duration-300">
-                        </div>
-                    </div>
+        <!-- Models Available Section -->
+        <section class="relative overflow-hidden py-20 min-h-[500px] flex items-center">
+            <!-- Floating Logos Background -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/200px-ChatGPT_logo.svg.png" alt="OpenAI Logo" class="floating-logo w-24" style="top: 10%; left: 15%; animation-duration: 12s;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Google_Gemini_logo.svg" alt="Gemini Logo" class="floating-logo w-20" style="top: 20%; right: 20%; animation-duration: 15s; animation-delay: -3s;">
+                <img src="https://images.spr.com/source/production/20230713144933/claude-2-logo.png" alt="Anthropic Logo" class="floating-logo w-32" style="bottom: 15%; left: 25%; animation-duration: 14s; animation-delay: -7s;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Meta-Logo.svg/200px-Meta-Logo.svg.png" alt="Meta Logo" class="floating-logo w-28" style="bottom: 25%; right: 10%; animation-duration: 13s; animation-delay: -5s;">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Mistral_AI_logo.svg/200px-Mistral_AI_logo.svg.png" alt="Mistral AI Logo" class="floating-logo w-28" style="top: 60%; left: 10%; animation-duration: 16s; animation-delay: -1s;">
+                 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/X_corp_logo.svg/200px-X_corp_logo.svg.png" alt="xAI Logo" class="floating-logo w-16" style="top: 70%; right: 30%; animation-duration: 11s; animation-delay: -4s;">
+            </div>
+
+            <!-- Content -->
+            <div class="container mx-auto px-6 relative z-10 text-center">
+                <h3 class="text-3xl md:text-4xl font-bold mb-12">Access the World's Leading AI Models</h3>
+                <div class="flex flex-wrap justify-center gap-4 max-w-4xl mx-auto">
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">GPT-4o</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">Gemini 2.5 Pro</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">Claude 3.7 Sonnet</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">Llama 3.1 405B</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">DeepSeek-V3</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">Mistral Large</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">Grok-3</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">Qwen3-235B</div>
+                    <div class="glass-effect py-2 px-5 rounded-lg font-semibold">And many more...</div>
                 </div>
             </div>
         </section>
@@ -309,27 +338,6 @@
             </div>
         </div>
     </footer>
-
-    <script>
-        // Screenshot fade on scroll
-        window.addEventListener('scroll', () => {
-            const topImage = document.getElementById('screenshot-top');
-            const wrapper = document.getElementById('screenshot-wrapper');
-
-            if (!topImage || !wrapper) return;
-
-            const rect = wrapper.getBoundingClientRect();
-            
-            // Start fading when the top of the wrapper is 25% down the viewport
-            const scrollStartPoint = window.innerHeight * 0.25;
-
-            // Calculate opacity based on the position of the wrapper in the viewport
-            // It will be fully transparent when the top of the wrapper reaches the top of the viewport
-            let opacity = (rect.top - 0) / scrollStartPoint;
-
-            topImage.style.opacity = Math.max(0, Math.min(1, opacity));
-        });
-    </script>
 
 </body>
 </html>
