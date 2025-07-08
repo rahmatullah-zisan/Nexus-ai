@@ -66,15 +66,15 @@
                     Get Lifetime Access - ৳1999
                 </a>
 
-                <!-- Visual -->
-                <div class="mt-16 relative">
-                    <img src="https://placehold.co/300x600/1E293B/FFFFFF?text=App+Screenshot" alt="App Screenshot" class="mx-auto rounded-3xl shadow-2xl shadow-sky-500/10 z-10 relative">
-                     <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-full h-full relative flex items-center justify-center">
-                            <!-- AI Model Logos -->
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1200px-ChatGPT_logo.svg.png" alt="ChatGPT Logo" class="absolute w-16 h-16 opacity-70 animate-pulse" style="top: 10%; left: 15%;">
-                            <img src="https://images.spr.com/source/production/20230713144933/claude-2-logo.png" alt="Claude AI Logo" class="absolute w-20 h-20 opacity-70 animate-pulse" style="top: 30%; right: 10%;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Google_Gemini_logo.svg" alt="Gemini Logo" class="absolute w-16 h-16 opacity-70 animate-pulse" style="bottom: 20%; left: 20%;">
+                <!-- Visual: Scroll-Reveal Screenshots -->
+                <div class="mt-16 h-[700px]"> <!-- Container with height for sticky effect -->
+                    <div id="screenshot-wrapper" class="sticky top-24 h-[600px]"> <!-- Sticky container -->
+                        <div class="relative w-[300px] h-[600px] mx-auto">
+                            <!-- Screenshot 2 (Bottom Layer) -->
+                            <img src="https://placehold.co/300x600/1E293B/818CF8?text=App+Screenshot+2" alt="App Screenshot 2" class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl shadow-2xl shadow-indigo-500/20">
+                            
+                            <!-- Screenshot 1 (Top Layer, fades out on scroll) -->
+                            <img id="screenshot-top" src="https://placehold.co/300x600/1E293B/FFFFFF?text=App+Screenshot+1" alt="App Screenshot 1" class="absolute top-0 left-0 w-full h-full object-cover rounded-3xl shadow-2xl shadow-sky-500/20 transition-opacity duration-300">
                         </div>
                     </div>
                 </div>
@@ -117,21 +117,21 @@
                 <div class="grid md:grid-cols-3 gap-8">
                     <!-- Step 1 -->
                     <div class="p-8 rounded-lg glass-effect">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-sky-500/20 mx-auto mb-4"><svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
-                        <h3 class="text-xl font-bold mb-2">1. Download the App</h3>
-                        <p class="text-slate-400">Get the app from the App Store or Google Play.</p>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-sky-500/20 mx-auto mb-4"><svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg></div>
+                        <h3 class="text-xl font-bold mb-2">1. Place Your Order</h3>
+                        <p class="text-slate-400">Get your lifetime access from our pricing section.</p>
                     </div>
                     <!-- Step 2 -->
                     <div class="p-8 rounded-lg glass-effect">
-                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-500/20 mx-auto mb-4"><svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg></div>
-                        <h3 class="text-xl font-bold mb-2">2. Select Your Model</h3>
-                        <p class="text-slate-400">Choose from a library of top-tier AI models.</p>
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-indigo-500/20 mx-auto mb-4"><svg class="w-8 h-8 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg></div>
+                        <h3 class="text-xl font-bold mb-2">2. Get Download Link</h3>
+                        <p class="text-slate-400">Receive your private download link via email instantly.</p>
                     </div>
                     <!-- Step 3 -->
                     <div class="p-8 rounded-lg glass-effect">
                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-purple-500/20 mx-auto mb-4"><svg class="w-8 h-8 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg></div>
                         <h3 class="text-xl font-bold mb-2">3. Create Instantly</h3>
-                        <p class="text-slate-400">Generate text, code, or images instantly, with no limits.</p>
+                        <p class="text-slate-400">Install the app and start using premium AI models.</p>
                     </div>
                 </div>
             </div>
@@ -226,6 +226,7 @@
                             <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>All future updates included</li>
                             <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>No ads, no subscriptions</li>
                             <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited usage</li>
+                             <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>2-Month Money-Back Guarantee</li>
                         </ul>
                         <a href="#final-cta" class="bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block w-full cta-button">
                             Buy Now
@@ -239,15 +240,11 @@
         <section id="final-cta" class="py-20 bg-gradient-to-r from-sky-500 to-indigo-500">
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-bold text-white mb-4">Ready to Unlock Your AI Superpowers?</h2>
-                <p class="text-lg text-sky-100 mb-8 max-w-2xl mx-auto">Get lifetime access to the world's best AI models today. Your next great idea is just a click away.</p>
-                <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-                    <a href="#" class="inline-block">
-                        <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download on the App Store" class="h-14">
-                    </a>
-                    <a href="#" class="inline-block">
-                        <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" alt="Get it on Google Play" class="h-20">
-                    </a>
-                </div>
+                <p class="text-lg text-sky-100 mb-6 max-w-2xl mx-auto">Get lifetime access to the world's best AI models today. Your next great idea is just a click away.</p>
+                <a href="#pricing" class="bg-white text-sky-600 font-bold text-lg px-8 py-4 rounded-lg inline-block cta-button">
+                    Get Your Lifetime Access
+                </a>
+                <p class="text-sky-100 mt-6">After payment confirmation, you will receive a direct download link for the app in your email.</p>
             </div>
         </section>
 
@@ -267,26 +264,34 @@
                     <!-- FAQ Item 2 -->
                     <details class="faq-item p-6 rounded-lg glass-effect group">
                         <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            What payment methods do you accept?
+                            How will I receive the app after payment?
                              <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <p class="mt-4 text-slate-300">We accept all major credit cards, debit cards, and popular mobile banking services in Bangladesh like bKash and Nagad.</p>
+                        <p class="mt-4 text-slate-300">After your payment is confirmed, a direct download link for the app will be sent to your provided email address within 5-10 minutes.</p>
                     </details>
                     <!-- FAQ Item 3 -->
                     <details class="faq-item p-6 rounded-lg glass-effect group">
                         <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            Which AI models can I access?
+                            What is the 2-month guarantee?
                             <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <p class="mt-4 text-slate-300">We provide access to a curated library of the latest and most powerful models, including those from OpenAI (GPT series), Anthropic (Claude series), Google (Gemini series), and more. We are constantly updating our library.</p>
+                        <p class="mt-4 text-slate-300">We have full confidence in our app. If the app doesn't work for you or stops working for any reason within 2 months (60 days) of installation, contact us for a full refund. No questions asked.</p>
                     </details>
                     <!-- FAQ Item 4 -->
                     <details class="faq-item p-6 rounded-lg glass-effect group">
                         <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
-                            Is my data and privacy protected?
+                            Is this truly a lifetime deal?
                             <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </summary>
-                        <p class="mt-4 text-slate-300">Yes. Privacy is a top priority. We do not store your conversations or prompts. All interactions are securely processed and are not used for any purpose other than providing you with the AI's response.</p>
+                        <p class="mt-4 text-slate-300">Yes, this is a lifetime deal. After paying once, you can use this app for as long as our system is operational. You will receive unlimited access. While we don't anticipate shutting down the system, we mention this for full transparency.</p>
+                    </details>
+                     <!-- FAQ Item 5 -->
+                    <details class="faq-item p-6 rounded-lg glass-effect group">
+                        <summary class="font-semibold text-lg cursor-pointer flex justify-between items-center">
+                            How do I get support if I have a problem?
+                            <svg class="w-5 h-5 transform group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                        </summary>
+                        <p class="mt-4 text-slate-300">For any issues, you can contact us via the email provided on our 'Contact' page. We will try to resolve your problem as quickly as possible.</p>
                     </details>
                 </div>
             </div>
@@ -304,6 +309,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Screenshot fade on scroll
+        window.addEventListener('scroll', () => {
+            const topImage = document.getElementById('screenshot-top');
+            const wrapper = document.getElementById('screenshot-wrapper');
+
+            if (!topImage || !wrapper) return;
+
+            const rect = wrapper.getBoundingClientRect();
+            
+            // Start fading when the top of the wrapper is 25% down the viewport
+            const scrollStartPoint = window.innerHeight * 0.25;
+
+            // Calculate opacity based on the position of the wrapper in the viewport
+            // It will be fully transparent when the top of the wrapper reaches the top of the viewport
+            let opacity = (rect.top - 0) / scrollStartPoint;
+
+            topImage.style.opacity = Math.max(0, Math.min(1, opacity));
+        });
+    </script>
 
 </body>
 </html>
