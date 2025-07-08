@@ -75,9 +75,9 @@
                 <p class="text-lg md:text-xl max-w-3xl mx-auto text-slate-300 mb-8">
                     Stop paying for expensive monthly AI subscriptions. Get lifetime access to the best AI models in one place for a single, affordable price.
                 </p>
-                <a href="#pricing" class="bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block cta-button">
+                <button class="open-modal-btn bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block cta-button">
                     Get Lifetime Access - ৳1999
-                </a>
+                </button>
             </div>
         </section>
 
@@ -257,9 +257,9 @@
                             <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited usage</li>
                              <li class="flex items-center"><svg class="w-5 h-5 mr-3 text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>2-Month Money-Back Guarantee</li>
                         </ul>
-                        <a href="#final-cta" class="bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block w-full cta-button">
+                        <button class="open-modal-btn bg-sky-500 text-white font-bold text-lg px-8 py-4 rounded-lg inline-block w-full cta-button">
                             Buy Now
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -270,9 +270,9 @@
             <div class="container mx-auto px-6 text-center">
                 <h2 class="text-4xl font-bold text-white mb-4">Ready to Unlock Your AI Superpowers?</h2>
                 <p class="text-lg text-sky-100 mb-6 max-w-2xl mx-auto">Get lifetime access to the world's best AI models today. Your next great idea is just a click away.</p>
-                <a href="#pricing" class="bg-white text-sky-600 font-bold text-lg px-8 py-4 rounded-lg inline-block cta-button">
+                <button class="open-modal-btn bg-white text-sky-600 font-bold text-lg px-8 py-4 rounded-lg inline-block cta-button">
                     Get Your Lifetime Access
-                </a>
+                </button>
                 <p class="text-sky-100 mt-6">After payment confirmation, you will receive a direct download link for the app in your email.</p>
             </div>
         </section>
@@ -338,6 +338,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/60 backdrop-blur-sm">
+        <div class="glass-effect p-8 rounded-lg max-w-md w-full mx-4 relative text-left">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-slate-400 hover:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+            <h3 class="text-2xl font-bold mb-4">Payment Instructions</h3>
+            <p class="text-slate-300 mb-6">Please follow the steps below to complete your purchase.</p>
+            <div class="space-y-4">
+                <p><strong class="font-semibold text-sky-400">Step 1:</strong> Go to your bKash App and select the 'Make Payment' option.</p>
+                <p><strong class="font-semibold text-sky-400">Step 2:</strong> Enter our Merchant Number below:</p>
+                <div class="bg-slate-900 p-3 rounded-lg text-center font-mono text-lg tracking-widest">01639590392</div>
+                <p><strong class="font-semibold text-sky-400">Step 3:</strong> Enter the amount: <span class="font-bold">৳1999</span>.</p>
+                <p><strong class="font-semibold text-sky-400">Step 4:</strong> After completing the payment, copy the Transaction ID (TrxID).</p>
+                <p><strong class="font-semibold text-sky-400">Step 5:</strong> Click the button below to send us the Transaction ID on our Facebook page.</p>
+                <a href="https://www.facebook.com/your-facebook-page-link" target="_blank" class="bg-blue-600 text-white font-bold text-lg px-8 py-3 rounded-lg inline-flex items-center justify-center w-full cta-button">
+                    <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06c0 5.52 4.5 10.02 10 10.02c5.52 0 10-4.5 10-10.02C22 6.53 17.52 2.04 12 2.04zM16.5 8.67h-2.25c-.34 0-.67.34-.67.67v1.34h2.92l-.42 2.92h-2.5v7.34h-2.92V13.6H9.5V10.68h1.33V9.5c0-1.34.83-2.5 2.5-2.5h2.17v2.67z"></path></svg>
+                    Send TrxID on Facebook
+                </a>
+                 <p class="text-xs text-slate-400 mt-4 text-center">We will verify your payment and send the app download link to you via Messenger within 15-20 minutes.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modal = document.getElementById('payment-modal');
+        const openModalBtns = document.querySelectorAll('.open-modal-btn');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        openModalBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            });
+        });
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    </script>
 
 </body>
 </html>
